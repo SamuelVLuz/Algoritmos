@@ -10,3 +10,10 @@ def desempilhar(p):
 def mostrarPilha(p):
     print(p)
 
+def topo(p):
+    return p[-1]
+
+def pilhaVazia(p):
+    if len(p) == 0:
+        return True
+    return False
