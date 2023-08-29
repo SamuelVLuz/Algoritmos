@@ -10,8 +10,10 @@ for tag in linhas:
     if tag[1] != "/":
         empilhar(tags, tag)
     else:
-        if ("<" + tag[2:]) in tags:
-            empilhar(tags, tag)
+        if topo(tags)[1:] == tag[2:]:
+            desempilhar
+        else:
+            print("ERRO: tag de fechamento não esperada (%s)" % (tag))
+            break
 
-print(tags)
             
